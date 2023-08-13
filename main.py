@@ -3,7 +3,7 @@ import sys
 import shutil
 
 def generate_blog_card(frontmatter, filename):
-    return f'<a href="/src/notes-to-self/{filename}.html"><div id="{filename}" class="nav-card"><h1 class="blog-title">{frontmatter["title"]}</h1><p>{frontmatter["date"]}</p></div></a>\n'
+    return f'<a href="./{filename}.html"><div id="{filename}" class="nav-card"><h1 class="blog-title">{frontmatter["title"]}</h1><p>{frontmatter["date"]}</p></div></a>\n'
 
 if os.path.isfile('src/notes-to-self/index.html'):
     os.remove('src/notes-to-self/index.html')
