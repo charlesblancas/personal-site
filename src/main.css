@@ -11,6 +11,8 @@ body {
     align-items: center;
     flex-grow: 1;
     line-height: 1.5;
+    background-color: var(--background);
+    color: var(--text);
 }
 
 div.content {

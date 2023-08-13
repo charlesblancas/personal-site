@@ -1,4 +1,6 @@
 :root {
+    --background: #FFFFFF;
+    --text: #000000;
     --highlight: #C2FFFB;
     --text-highlight: #2D5B6B;
     --main: #ffadd3;
@@ -7,6 +9,8 @@
 
 @media(prefers-color-scheme: dark) {
     :root {
+        --background: #000000;
+        --text: #ffffff;
         --highlight: #2D5B6B;
         --text-highlight: #C2FFFB;
         --main: #9D2F62;
