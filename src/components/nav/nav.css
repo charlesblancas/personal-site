@@ -1,0 +1,22 @@
+@import url(../../colors.css);
+
+.nav {
+    display: flex;
+    background-color: var(--main); 
+    margin: auto;
+    justify-content: center;
+    gap: 1rem;
+    width: 100vw;
+    border-bottom: solid 1px;
+}
+
+.nav h1 {
+    font-size: medium;
+    font-weight: normal;
+    transition: all 0.1s;
+}
+
+.nav h1:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}

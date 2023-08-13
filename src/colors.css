@@ -1,0 +1,15 @@
+:root {
+    --highlight: #C2FFFB;
+    --text-highlight: #2D5B6B;
+    --main: #ffadd3;
+    --dark-main: #9D2F62;
+}
+
+@media(prefers-color-scheme: dark) {
+    :root {
+        --highlight: #2D5B6B;
+        --text-highlight: #C2FFFB;
+        --main: #9D2F62;
+        --dark-main: #ffadd3;
+    }
+}

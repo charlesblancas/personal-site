@@ -1,0 +1,49 @@
+@import url(components/nav/nav.css);
+@import url(../content/notes-to-self/notes-to-self-index.css);
+@import url(../content/notes-to-self/notes-to-self-template.css);
+@import url(index.css);
+@import url(colors.css);
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+div.content {
+    margin: 1rem;
+    max-width: 720px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nav-card {
+    box-shadow: 2px 2px;
+    padding: 1rem;
+    border: 1px solid;
+    transition: all 0.1s;
+}
+
+.nav-card:hover,.nav-card:focus-visible{
+    background-color: var(--highlight);
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px;
+}
+
+.nav-card:active{
+    background-color: var(--highlight);
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px;
+}
