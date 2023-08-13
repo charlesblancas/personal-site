@@ -1,4 +1,4 @@
-@import url(../../src/colors.css);
+@import url(../src/colors.css); 
 
 .blogpost a{
     font-size: medium;
