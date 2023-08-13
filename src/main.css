@@ -1,7 +1,5 @@
 @import url(components/nav/nav.css);
-@import url(../content/notes-to-self/notes-to-self-index.css);
-@import url(../content/notes-to-self/notes-to-self-template.css);
-@import url(index.css);
+@import url(notes-to-self/notes-to-self-index.css);
 @import url(colors.css);
 
 body {

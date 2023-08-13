@@ -1,12 +1,12 @@
-@import url(../src/colors.css); 
+@import url(../colors.css); 
 
 .blogpost a{
     font-size: medium;
     font-weight: normal;
     transition: all 0.1s;
-    color: var(--text-highlight)
+    text-decoration: underline;
 }
 
 .blogpost a:hover{
-    text-decoration: underline;
+    background-color: var(--highlight);
 }
