@@ -14,9 +14,9 @@
     font-size: medium;
     font-weight: normal;
     transition: all 0.1s;
+    text-decoration: underline;
 }
 
 .nav h1:hover {
-    text-decoration: underline;
-    font-weight: bold;
+    background-color: var(--highlight);
 }

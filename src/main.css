@@ -1,4 +1,5 @@
 @import url(components/nav/nav.css);
+@import url(index.css);
 @import url(notes-to-self/notes-to-self-index.css);
 @import url(colors.css);
 
@@ -46,4 +47,9 @@ a {
     background-color: var(--highlight);
     transform: translate(2px, 2px);
     box-shadow: 0px 0px;
+}
+
+img {
+    border: 1px solid;
+    box-shadow: 2px 2px;
 }

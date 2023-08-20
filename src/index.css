@@ -1,0 +1,37 @@
+@import url(colors.css);
+
+.picture-and-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.name {
+    line-height: 1; 
+    font-size: 3.2rem; 
+    font-weight: bold;
+}
+
+.name p {
+    margin: 0;
+}
+
+.links svg {
+    color: var(--text);
+    width: 100%;
+    transition: all 0.1s;
+}
+
+.links svg:hover,.links svg:focus-visible {
+    color: var(--text-highlight);
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 20rem;
+}
