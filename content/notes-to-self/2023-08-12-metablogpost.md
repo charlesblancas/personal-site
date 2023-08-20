@@ -1,5 +1,5 @@
 ---
-title: The Meta-Blogpost — The Blog Post about the Blog
+title: The Meta-Blogpost—The Blog Post about the Blog
 date: 2023-08-12
 ---
 I've been itching to do some writing lately. And not a lab report or documentation—something more creative and opinionated. The last time I had to write that type of text was around two years ago in English class. But I did not appreciate writing then. Partly because I did not care about the topics I was writing about, and partly because I felt pressure since it was graded. Now felt like the time to start writing again, and a blog seemed like a good place to start.
