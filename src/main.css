@@ -40,6 +40,7 @@ a {
     padding: 1rem;
     border: 1px solid;
     transition: all 0.1s;
+    flex-grow: 1;
 }
 
 .nav-card:hover,.nav-card:focus-visible{
