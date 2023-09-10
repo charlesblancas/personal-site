@@ -2,16 +2,36 @@ import { TrieNode } from './trie.mjs';
 import { google10kWords } from './google10k.mjs';
 import { words } from './words.mjs';
 
-let root = new TrieNode('', {});
-
 const input = document.getElementById('input');
 const result = document.getElementById('result');
 const notRecognized = document.getElementById('notRecognized');
 const addToDictionary = document.getElementById('addToDictionary');
-const google10kButton = document.getElementById('google10kWords');
 const wordsButton = document.getElementById('words');
+const currentWordlist = document.getElementById('currentWordlist');
 
-const loadDictionary = (dictionary) => {
+let root = new TrieNode('', {});
+let currentDictionary = 'google10kWords';
+
+google10kWords.forEach((word) => {
+    root.insertWord(word);
+});
+
+const switchDictionary = () => {
+    let dictionary;
+
+    if (currentDictionary === 'google10kWords') {
+        currentDictionary = 'words';
+        currentWordlist.innerText = 'Current Wordlist: dwyl 400k';
+        wordsButton.innerText = 'Switch to Google 10k';
+        dictionary = words;
+    } else {
+        currentDictionary = 'google10kWords';
+        currentWordlist.innerText = 'Current Wordlist: Google 10k';
+        wordsButton.innerText = 'Switch to dwyl 400k';
+        dictionary = google10kWords;
+    }
+
+    console.log('hi');
     result.innerText = '';
     input.classList.remove('invalid');
     input.classList.remove('valid');
@@ -26,10 +46,7 @@ const loadDictionary = (dictionary) => {
     });
 };
 
-loadDictionary(google10kWords);
-
-google10kButton.addEventListener('click', () => loadDictionary(google10kWords));
-wordsButton.addEventListener('click', () => loadDictionary(words));
+wordsButton.addEventListener('click', () => switchDictionary());
 
 const validWord = () => {
     input.classList.add('valid');
