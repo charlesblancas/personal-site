@@ -1,0 +1,15 @@
+:root {
+    --invalid: #F0949F;
+    --valid: #b4ffad;
+    --background: #000000;
+    --text: #ffffff;
+}
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        --invalid: #7d121e;
+        --valid: #0a7a00;
+        --text: #000000;
+        --background: #ffffff;
+    }
+}
