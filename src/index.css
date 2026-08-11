@@ -86,7 +86,7 @@
 
 @media (max-width: 560px) {
   .picture-and-links { grid-template-columns: auto 1fr; }
-  .links { grid-column: 1 / -1; justify-self: start; margin-left: 0; }
+  .links { grid-column: 1 / -1; justify-self: stretch; width: 100%; box-sizing: border-box; margin-left: 0; }
 }
 
 @media (max-width: 380px) {
