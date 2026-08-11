@@ -82,10 +82,12 @@
     const socialLinks = [...document.querySelectorAll('.social-link')];
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (socialBox && socialLinks.length && !reducedMotion.matches) {
+      const bubbleDiameter = 52;
+      const initialSpread = (socialBox.clientWidth - bubbleDiameter) / (socialLinks.length + 1);
       const bubbles = socialLinks.map((link, index) => ({
         link,
         radius: 26,
-        x: 18 + index * 76,
+        x: initialSpread * (index + 1),
         y: 18 + (index % 2) * 4,
         vx: index ? -22 : 18,
         vy: index ? 12 : -8,
