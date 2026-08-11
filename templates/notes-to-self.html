@@ -6,22 +6,21 @@
         <meta name="color-scheme" content="light dark" />
         <title>$title$</title>
         <link rel="stylesheet" href="../normalize.css" />
-        <link rel="stylesheet" href="../main.css" />
+        <link rel="stylesheet" href="../main.css?v=5" />
         <link
             rel="icon"
             href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫡</text></svg>"
         />
     </head>
     <body>
-        <iframe
-            loading=""
-            src="../components/nav/nav.html"
-            onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"
-        ></iframe>
-        <div class="content blogpost">
+        <a class="skip-link" href="#main-content">Skip to content</a>
+        <nav class="nav" aria-label="Primary navigation">
+            <div class="nav-links"><a href="../">Home</a><a href="../notes-to-self/" aria-current="page">Notes to Self</a><a href="../dsa/">DSA playground</a></div>
+        </nav>
+        <main class="content blogpost" id="main-content" tabindex="-1">
             <h1 class="title">$title$</h1>
             <p class="date">Date: $date$</p>
             $body$
-        </div>
+        </main>
     </body>
 </html>

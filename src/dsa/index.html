@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="color-scheme" content="light dark" />
-        <title>Notes to Self</title>
-        <link rel="stylesheet" href="../main.css" />
+        <title>DSA playground · Charles Blancas</title>
+        <link rel="stylesheet" href="../main.css?v=5" />
         <link rel="stylesheet" href="../normalize.css" />
         <link
             rel="icon"
@@ -13,12 +13,14 @@
         />
     </head>
     <body>
-        <iframe
-            loading=""
-            src="../components/nav/nav.html"
-            onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"
-        ></iframe>
-        <div class="content">
+        <a class="skip-link" href="#main-content">Skip to content</a>
+        <nav class="nav" aria-label="Primary navigation">
+            <div class="nav-links"><a href="../">Home</a><a href="../notes-to-self/">Notes to Self</a><a href="./" aria-current="page">DSA playground</a></div>
+        </nav>
+        <main class="content" id="main-content" tabindex="-1">
+            <p class="kicker">Experiments</p>
+            <h1>Data structures &amp; algorithms</h1>
+            <p class="lede">Small interactive playgrounds for making abstract ideas concrete.</p>
             <div class="nav-cards">
                 <a href="./tries"
                     ><div class="nav-card">
@@ -27,6 +29,6 @@
                     </div></a
                 >
             </div>
-        </div>
+        </main>
     </body>
 </html>

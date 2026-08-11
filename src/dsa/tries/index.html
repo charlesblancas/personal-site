@@ -5,27 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="color-scheme" content="light dark" />
         <title>Tries</title>
-        <link rel="stylesheet" href="main.css" />
-        <link rel="stylesheet" href="../../main.css" />
-        <link rel="stylesheet" href="../../normalize.css" />
+        <link rel="stylesheet" href="../../normalize.css?v=5" />
+        <link rel="stylesheet" href="../../main.css?v=5" />
+        <link rel="stylesheet" href="main.css?v=5" />
         <link
             rel="icon"
             href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫡</text></svg>"
         />
     </head>
     <body>
-        <iframe
-            loading=""
-            src="../../components/nav/nav.html"
-            onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"
-        ></iframe>
-        <header>
+        <a class="skip-link" href="#main-content">Skip to content</a>
+        <nav class="nav" aria-label="Primary navigation">
+            <div class="nav-links"><a href="../../">Home</a><a href="../../notes-to-self/">Notes to Self</a><a href="../" aria-current="page">DSA playground</a></div>
+        </nav>
+        <header id="main-content" tabindex="-1">
             <h1>Tries</h1>
             <h2>Predictive text using a trie data structure</h2>
         </header>
         <main>
             <div class="playzone">
                 <div class="inputContainer">
+                    <label for="input">Search a word</label>
                     <input id="input" /><button id="addToDictionary" disabled>
                         Add to Dictionary
                     </button>

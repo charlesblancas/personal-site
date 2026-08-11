@@ -1,10 +1,10 @@
-@import url(colors.css);
 
 .picture-and-links {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-content: start;
   gap: 1rem;
-  flex-wrap: wrap;
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -17,13 +17,20 @@
   justify-content: center;
 }
 
-.name p {
+.name h1 {
   margin: 0;
+  font: inherit;
+}
+
+.accent {
+  color: var(--dark-main);
+  animation: cursor-blink 1.05s steps(1, end) infinite;
 }
 
 .links svg {
   color: var(--text);
-  width: 100%;
+  width: 1.65rem;
+  height: 1.65rem;
   transition: all 0.1s;
 }
 
@@ -34,8 +41,60 @@
 
 .links {
   display: flex;
-  gap: 1rem;
+  position: relative;
+  width: 9rem;
+  height: 5.2rem;
+  gap: .45rem;
   align-items: center;
   justify-content: center;
-  max-width: 20rem;
+  margin-left: .75rem;
+  padding: .55rem .65rem;
+  border: 1px solid color-mix(in srgb, var(--text) 28%, transparent);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--card) 58%, transparent);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--shadow) 15%, transparent), inset 0 1px color-mix(in srgb, white 28%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.links a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  padding: .3rem;
+  border-radius: .75rem;
+  will-change: transform;
+}
+
+.links a:nth-child(1) { transform: translate(18px, 18px) rotate(0deg); }
+.links a:nth-child(2) { transform: translate(94px, 22px) rotate(0deg); }
+
+.links a:hover svg { color: var(--text-highlight); transform: scale(1.18); }
+
+.links a:focus-visible {
+  outline: 2px solid var(--highlight);
+  outline-offset: 3px;
+}
+
+@keyframes cursor-blink {
+  0%, 48% { opacity: 1; }
+  49%, 100% { opacity: 0; }
+}
+
+@media (max-width: 560px) {
+  .picture-and-links { grid-template-columns: auto 1fr; }
+  .links { grid-column: 1 / -1; justify-self: start; margin-left: 0; }
+}
+
+@media (max-width: 380px) {
+  .picture-and-links { grid-template-columns: 1fr; }
+  .name { font-size: 2.35rem; }
+  .links { grid-column: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accent { animation: none; }
 }

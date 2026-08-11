@@ -1,17 +1,19 @@
-@import url(components/nav/nav.css);
-@import url(index.css);
-@import url(notes-to-self/notes-to-self-index.css);
-@import url(colors.css);
+@import url(components/nav/nav.css?v=5);
+@import url(index.css?v=5);
+@import url(notes-to-self/notes-to-self-index.css?v=5);
+@import url(colors.css?v=5);
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
-    line-height: 1.5;
+    line-height: 1.6;
     background-color: var(--background);
     color: var(--text);
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+    background-size: 22px 22px;
 }
 
 iframe {
@@ -19,9 +21,10 @@ iframe {
     border: 0;
 }
 
-div.content {
-    margin: 1rem;
-    max-width: 720px;
+.content {
+    width: min(100% - 2rem, 760px);
+    margin: 0 auto;
+    padding: 3.5rem 0 2rem;
 }
 
 a {
@@ -32,21 +35,22 @@ a {
 .nav-cards {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .nav-card {
-    box-shadow: 2px 2px;
-    padding: 1rem;
-    border: 1px solid;
-    transition: all 0.1s;
+    box-shadow: 4px 4px var(--shadow);
+    padding: 1.4rem 1.5rem;
+    border: 1px solid var(--text);
+    background: var(--card);
+    transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
     flex-grow: 1;
 }
 
-.nav-card:hover,.nav-card:focus-visible{
+.nav-card:hover, a:focus-visible .nav-card {
     background-color: var(--highlight);
     transform: translate(-2px, -2px);
-    box-shadow: 4px 4px;
+    box-shadow: 7px 7px var(--shadow);
 }
 
 .nav-card:active{
@@ -56,6 +60,34 @@ a {
 }
 
 img {
-    border: 1px solid;
-    box-shadow: 2px 2px;
+    border: 1px solid var(--text);
+    box-shadow: 4px 4px var(--shadow);
+    width: 8.7em;
+    height: 8.7em;
+    object-fit: cover;
+}
+
+.nav { align-self: stretch; width: auto; box-sizing: border-box; padding: .9rem max(3rem, calc((100vw - 760px) / 2 + 1rem)); }
+.skip-link { position: absolute; left: -999px; }
+.skip-link:focus { left: 1rem; top: 1rem; z-index: 4; padding: .5rem .75rem; background: var(--highlight); }
+.nav-brand { font-family: monospace; font-weight: 700; font-size: 1.1rem; }
+.nav-links { display: flex; gap: 1.2rem; }
+.nav a { padding: .6rem 0; }
+.nav a:hover, .nav a:focus-visible { color: var(--text-highlight); background: transparent; text-decoration: underline; text-underline-offset: .25rem; }
+.hero { padding-top: 2rem; }
+.intro { max-width: 34rem; margin: 2.4rem 0 3rem; }
+.kicker, .card-label { color: var(--text-highlight); font: 700 .72rem/1.2 monospace; letter-spacing: .1em; text-transform: uppercase; }
+.lede { font-size: clamp(1.25rem, 3vw, 1.65rem); line-height: 1.35; margin: .8rem 0 0; }
+.nav-card h2 { margin: .35rem 0; font-size: clamp(1.35rem, 4vw, 1.8rem); }
+.nav-card h2 span { float: right; color: var(--text-highlight); }
+.nav-card p:last-child { margin: 0; max-width: 34rem; }
+footer { display: flex; justify-content: space-between; gap: 1rem; margin-top: 4rem; color: var(--muted); font-size: .78rem; }
+
+@media (max-width: 560px) {
+    .nav { padding: .85rem 1.5rem; }
+    .nav-links { gap: .8rem; font-size: .86rem; }
+    .content { width: min(100% - 1.5rem, 760px); padding-top: 3rem; }
+    .picture-and-links { justify-content: flex-start; }
+    .name { font-size: 2.6rem; }
+    footer { flex-direction: column; }
 }

@@ -2,21 +2,22 @@
 
 .nav {
     display: flex;
-    background-color: var(--main); 
-    margin: auto;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     gap: 1rem;
-    width: 100vw;
-    border-bottom: solid 1px;
+    padding: 0 1.5rem;
+    min-height: 3.4rem;
+    background-color: color-mix(in srgb, var(--background) 88%, var(--main));
+    border-bottom: 1px solid var(--text);
+    backdrop-filter: blur(12px);
 }
 
-.nav h1 {
-    font-size: medium;
-    font-weight: normal;
-    transition: all 0.1s;
-    text-decoration: underline;
+.nav h1, .nav a {
+    font-size: .86rem;
+    font-weight: 600;
+    transition: color 160ms ease, background-color 160ms ease;
 }
 
-.nav h1:hover {
+.nav h1:hover, .nav a:hover {
     background-color: var(--highlight);
 }
