@@ -1,7 +1,7 @@
-@import url(components/nav/nav.css?v=5);
-@import url(index.css?v=5);
-@import url(notes-to-self/notes-to-self-index.css?v=5);
-@import url(colors.css?v=5);
+@import url(components/nav/nav.css?v=6);
+@import url(index.css?v=6);
+@import url(notes-to-self/notes-to-self-index.css?v=6);
+@import url(colors.css?v=6);
 
 body {
     font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
