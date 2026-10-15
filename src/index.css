@@ -42,7 +42,7 @@
 .links {
   display: flex;
   position: relative;
-  width: 9rem;
+  width: 11rem;
   height: 5.2rem;
   gap: .45rem;
   align-items: center;
@@ -69,8 +69,9 @@
   will-change: transform;
 }
 
-.links a:nth-child(1) { transform: translate(18px, 18px) rotate(0deg); }
-.links a:nth-child(2) { transform: translate(94px, 22px) rotate(0deg); }
+.links a:nth-child(1) { transform: translate(8px, 18px) rotate(0deg); }
+.links a:nth-child(2) { transform: translate(66px, 22px) rotate(0deg); }
+.links a:nth-child(3) { transform: translate(124px, 18px) rotate(0deg); }
 
 .links a:hover svg { color: var(--text-highlight); transform: scale(1.18); }
 
