@@ -3,8 +3,16 @@
 @import url(notes-to-self/notes-to-self-index.css?v=6);
 @import url(colors.css?v=6);
 
+@font-face {
+    font-family: "Charles Open";
+    src: url("fonts/charles-open-regular-0.302.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
 body {
-    font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+    font-family: "Charles Open", "Avenir Next", Avenir, "Segoe UI", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
